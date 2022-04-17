@@ -1,0 +1,491 @@
+/**** Reset styles CSS  *****/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* *::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+:root {
+  --main-font: sans-serif;
+  --font-size: 1rem;
+  --main-color: #f7df1e;
+  --second-color: #222;
+  --main-modal-color: rgba(247, 222, 30, 0.85);
+  --second-modal-color: rgba(34, 34, 34, 0.85);
+  --text-theme-color: rgb(255, 255, 255);
+  --container-width: 1200px;
+}
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+body {
+  /*background: var(--second-color);
+  color: var(--text-theme-color); */
+  width: inherit;
+  margin: 0;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+/****** menu-hamburguer *****/
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--main-color);
+  color: var(--second-color);
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section__container {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.section__container--modifier{
+  font-size: 2.3rem;
+}
+
+.section__container__title {
+  margin: 2rem;
+}
+
+.panel {
+  position: fixed;
+  /* width: 100%; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  overflow-y: auto;
+  background-color: var(--second-modal-color);
+  transition: transform 0.3s ease;
+  transform: translate(0, -140%);
+}
+
+.panel.is-active {
+  transform: translate(0, 0);
+}
+
+.panel-btn {
+  cursor: pointer;
+  position: fixed;
+  border: none;
+  z-index: 999;
+  bottom: 1.2vh;
+  right: 1vh;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.menu {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu a {
+  padding: 1.3rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+
+/**Boton theme dark**/
+
+.dark-theme-btn{
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  left: 1vh;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  transition: all 0.3s ease-out;
+}
+.dark-theme-btn:hover{
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.dark-mode{
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+
+/* .button_themedark{ esta es mi solucion pero no la uso porque no es optima
+  width: 4rem;
+	height: 4rem;
+  background: var(--main-color);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 50%;
+	font-size: 1.5rem;
+	position: fixed;
+	bottom: 1.1rem;
+	left: 1rem;
+	border: 4px solid transparent;
+	z-index: 3000;
+	transition: all 300ms ease;
+	transform: scale(1);
+}
+
+.button_themedark:hover{
+	transform: scale(1.1);
+	border-color: rgba(0,0,0,0.1);
+  background: var(--second-color);
+}
+
+.moon{
+  display: flex;
+  cursor: pointer;
+  background: none;
+  border: none;
+  overflow: hidden;
+  opacity: 1;
+  visibility: none;
+  font-size: 2rem;
+}
+
+.moon:hover{
+  transition: all 0.5s;
+}
+
+.moon.is-active{
+  display: none;
+  overflow: hidden;
+  opacity: 0;
+  visibility: none;
+  font-size: 2rem;
+}
+
+.sun{
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  overflow: hidden;
+  opacity: 1;
+  visibility: none;
+  font-size: 2rem;
+}
+
+.sun.is-active{
+  display: flex;
+  overflow: hidden;
+  opacity: 1;
+  visibility: none;
+  font-size: 2rem;
+}
+ */
+/**Boton Scroll**/
+.button-up{
+  width: 4rem;
+	height: 4rem;
+	background: var(--main-color);
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--second-color);
+	border-radius: 50%;
+	font-size: 1.5rem;
+	position: fixed;
+	/*bottom: 1.2rem;*/
+  top: 46.2rem;
+	right: 5rem;
+	border: 4px solid transparent;
+	z-index: 3000;
+	transition: all 300ms ease;
+	transform: scale(1);
+}
+
+.button-up:hover{
+	transform: scale(1.1);
+	border-color: rgba(0,0,0,0.1);
+	-webkit-animation: 0.5s chicle 1;
+}
+
+.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+@-webkit-keyframes chicle{
+
+	30%{
+		-webkit-transform: scaleX(1.25) scaleY(0.75);
+	}
+
+	40%{
+	-webkit-transform: scaleX(0.75) scaleY(1.25);
+    }
+
+    60%{
+	-webkit-transform: scaleX(1.15) scaleY(0.85);
+    }
+
+} 
+/**Reloj digital**/
+#iniciar__reloj {
+  cursor: pointer;
+}
+#iniciar__reloj:disabled {
+  cursor: no-drop;
+  border-radius: 4px;
+  color: #666666;
+  background: #cccccc;
+}
+#detener__reloj {
+  cursor: pointer;
+}
+
+#detener__reloj:disabled {
+  cursor: no-drop;
+  border-radius: 4px;
+  color: #666666;
+  background: #cccccc;
+}
+#clock {
+  display: none;
+  justify-content: center;
+  margin: 2rem;
+  background-color: #333;
+  font-family: sans-serif;
+  font-size: 60px;
+  text-shadow: 0px 0px 1px #fff;
+  color: #fff;
+}
+
+/**Alarma**/
+#iniciar__alarma{
+  cursor: pointer;
+}
+#iniciar__alarma:disabled {
+  cursor: no-drop;
+  border-radius: 4px;
+  color: #666666;
+  background: #cccccc;
+}
+#detener__alarma{
+  cursor: pointer;
+}
+#detener__alarma:disabled {
+  cursor: no-drop;
+  border-radius: 4px;
+  color: #666666;
+  background: #cccccc;
+}
+
+/**Eventos del teclado**/
+
+.section__container__eventkey{
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  margin: auto auto;
+  background: var(--second-color);
+}
+
+#circle{
+  position: relative;
+}
+.section__container__circle{
+  position: relative;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 10rem;
+  background: var(--main-color);
+} 
+
+/**countdown**/
+#countdown-1{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  background-color: #333;
+  font-family: sans-serif;
+  font-size: 60px;
+  text-shadow: 0px 0px 1px #fff;
+  color: #fff;
+}
+
+.countdown__container{
+  display: flex;
+  width: 100%;
+  margin: 1rem auto;
+  flex-direction: row;
+  align-content: center;
+}
+
+.countdown__container__items{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px;
+}
+
+
+.countdown__container__item{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #222222;
+  border-radius: 6px;
+  margin: 1rem auto;
+  color: rgba(247, 222, 30, 0.75);
+}
+/*para que un modificador funcione de manera correcta se recomienda encarecidamente que este debajo del elemento padre para que se active*/
+.countdown__container__item--white {
+  background-color: var(--text-theme-color);
+  color: var(--second-color);
+}
+
+.number{
+    width: 10rem;
+    font-size: 32px;
+    text-align: center;
+    padding-top: 20px;
+    color: #FFFFFF;
+    background-color: #000000;
+    height: 70px;
+}
+
+.concept{
+    font-size: 28px;
+    text-align: center;
+}
+
+/* responsive-tester */
+
+.container__tester__inputs{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  width: 15%;
+}
+/*** Network Status ***/
+.online,
+.offline{
+  width: 100%;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background: rgb(15, 160, 15);
+  color: #fff;
+}
+
+.offline{
+  background-color: rgb(236, 54, 54);
+}
+/*deteccion de conexion / este codigo fue realizado por mi opte por el del profesor porque usa una manera mas optima
+.conexion{
+  display: none;
+}
+
+
+.conexion--offline{
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 6%;
+  background: #d31c1c;
+  z-index: 1000;
+}
+
+.conexion--online{
+  display: inline-block;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  height: 6%;
+  background: green;
+  z-index: 2000;
+}
+
+.text__conexion{
+  display: none;
+}
+
+.text__conexion--visible{
+  display: inline-block;
+  text-align: center;
+}
+*/
+
+/**Geolocalizacion**/
+#status{
+  margin-top: 1rem;
+}
+#map-link{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+/*media querys*/
+@media screen and (max-width: 905px){
+  .countdown__container__items{
+      flex-direction: column;
+  }
+
+  }

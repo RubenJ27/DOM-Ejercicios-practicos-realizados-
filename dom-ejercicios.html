@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-dark="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/dom-ejercicios.css">
+  <link rel="stylesheet" href="Botones/css/fontello.css">
+  <title>Ejercicios del DOM</title>
+</head>
+
+<body class="theme__dark" data-dark>
+ <!-- <div class="conexion"><h2 class="text__conexion"></h2></div> este codigo lo realice yo, opte por el del profe porque es mas optimo-->
+  <header class="header">
+    <h1>Ejercicios del DOM</h1>
+  </header>
+  <button class="panel-btn hamburguer" type="button">
+    <span class="hamburguer-box">
+      <div class="icon-menu"></div>
+    </span>
+  </button>
+  <aside class="panel">
+    <nav class="menu">
+      <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
+      <a href="#seccion2">Eventos del teclado</a>
+      <a href="#seccion3">Countdown</a>
+      <a href="#seccion4">Resposive con Javascript</a>
+      <a href="#seccion5">Responsive Tester</a>
+      <a href="#seccion6">Deteccion de dispositivos (User Agent)</a>
+      <a href="#seccion7">Deteccion de conexion</a>
+      <a href="#seccion8">Deteccion de WebCam</a>
+      <a href="#seccion9">Geolocalizacion</a>
+      <a href="#seccion10">Filtros de Busqueda</a>
+      <a href="#seccion11">Seccion 11</a>
+    </nav>
+  </aside>
+  <main>
+    <section id="seccion1" class="section__container">
+      <h2 class="section__container__title">Reloj Digital y Alarma Sonora</h2>
+
+
+      <div id="clock" class="clock-1"></div>
+
+      <input type="button" value="Iniciar Reloj" id="iniciar__reloj">
+      <input type="button" value="Detener Reloj" id="detener__reloj">
+      <input type="button" value="Iniciar Alarma" id="iniciar__alarma">
+      <input type="button" value="Detener Alarma" id="detener__alarma">
+    </section>
+    <section id="seccion2" class="section__container">
+      <h2 class="section__container__title">Eventos del teclado</h2>
+
+      <div class="section__container__eventkey">
+        <p id="log"></p>
+        <div class="section__container__circle" id="circle">
+
+        </div>
+      </div>
+    </section>
+    <section  id="seccion3" class="section__container">
+      <h2 class="section__container--modifier">Cuenta atras para mi cumpleaños 📅🎈🎁🎂</h2>
+      <div class="countdown__container" id="countdown">
+
+        <div class="countdown__container__items">
+
+          <div class="countdown__container__item" data-white>
+            <div class="number" id="days">00</div>
+            <div class="concept">Dias</div>
+          </div>
+
+          <div class="countdown__container__item" data-white>
+            <div class="number" id="hours">00</div>
+            <div class="concept">Horas</div>
+          </div>
+
+          <div class="countdown__container__item" data-white>
+            <div class="number" id="minutes">00</div>
+            <div class="concept">Minutos</div>
+          </div>
+
+          <div class="countdown__container__item" data-white>
+            <div class="number" id="seconds">00</div>
+            <div class="concept">Segundos</div>
+          </div>
+
+        </div>
+
+        <!-- <div id="countdown__container__items"></div>
+        <div id="countdown__container__items"></div>
+        <div id="countdown__container__items"></div> -->
+      </div>
+
+      <div id="countdown"></div>
+    </section>
+    <section id="section4" class="section__container">
+      <h2 class="section__container__title">Responsive con Javascript</h2>
+      <!-- insert iframe from youtube -->
+      
+      <iframe class="youtube__link" width="400" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+      <!--maps-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.248188136!2d139.6007803883118!3d35.66844146514209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sciudad%20de%20Tokio%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2sco!4v1648222480984!5m2!1ses!2sco" width="400" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps__link"></iframe>
+    </section>
+    <section id="seccion5" class="section__container">
+      <h2>Resposive Tester</h2>
+      <div class="container__tester">
+        <!-- <div class="container__tester__inputs"> este es mi solucion al ejercicio opte por la del profe porque es la manera mas optima de hacerlo
+          <input type="url" name="URL" id="container__tester__url" placeholder="URL">
+          <input type="text" name="Ancho" id="container__tester__width" placeholder="Ancho">
+          <input type="text" name="Alto" id="container__tester__height" placeholder="Alto">
+        </div>
+        <div class="container__tester__buttons">
+          <input type="button" value="Probar" id="container__tester__button__try">
+          <input type="button" value="Cerrar" id="container__tester__button__close">
+        </div> -->
+        <form id="responsive-tester"><!--esta es la solucion del profe obte por esta porque es la mas optima-->
+          <input type="url" name="direccion" placeholder="URL" required>
+          <br>
+          <input type="text" name="ancho" placeholder="Ancho" required>
+          <br>
+          <input type="text" name="alto" placeholder="Alto" required>
+          <br>
+          <input type="submit" name="probar" value="Probar">
+          <input type="button" name="cerrar" value="Cerrar">
+        </form>
+
+      </div>
+
+    </section>
+    <section id="seccion6" class="section__container">
+      <h2>Deteccion de dispositivos<br>(User Agent)</h2>
+      <div id="user-device"></div>
+    </section>
+    <section id="seccion7" class="section__container">
+      <h2>Deteccion de conexion</h2>
+    </section>
+    <section id="seccion8" class="section__container">
+      <h2>Deteccion de WebCam</h2>
+      <!-- Aqui el video embebido de la web cam -->
+      <div class="container__camera">
+        <video id="video" playsinline autoplay></video>
+      </div>
+      
+    </section>
+    <section id="seccion9" class="section__container">
+      <h2>Geolocalizacion</h2>
+      <p id="status"></p>
+      <p id="presicion"></p>
+      <a id="map-link" target="_blan" rel="noopener""></a>
+    </section>
+    <section id="seccion10" class="section__container">
+      <h2>Filtros de Búsqueda</h2><!-- eventos del teclado -->
+    </section>
+    <section id="seccion11" class="section__container">
+      <h2>Seccion 11</h2>
+    </section>
+  </main>
+
+  <!--Boton de tema dark-->
+  <button class="dark-theme-btn">🌙</button> <!--esta es la solucion del profe la uso porque es mas optima-->
+ <!--  <div class="button_themedark"> esta es mi solucion
+    <button class="sun">☀️</button>
+    <button class="moon">🌙</button>
+  </div> -->
+
+
+   <!--Boton de ir hacia arriba-->
+
+   <div class="button-up hidden">
+
+    <i class="fas fa-chevron-up"></i>
+
+  </div>
+  <script src="js/index_dom.js" type="module"></script>
+</body>
+
+</html>
