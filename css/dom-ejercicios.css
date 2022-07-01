@@ -32,6 +32,9 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+main{
+  width: 75%;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -60,7 +63,7 @@ img {
   text-align: center;
 }
 
-.section__container--modifier{
+.section__container--modifier {
   font-size: 2.3rem;
 }
 
@@ -70,41 +73,29 @@ img {
 
 .panel {
   position: fixed;
-  /* width: 100%; */
-  top: 0;
+  width: 30%;
+  height: 100%;
+  top: 2.3rem;
   bottom: 0;
-  left: 0;
+  left: 64.5rem;
   right: 0;
   z-index: 998;
   overflow-y: auto;
-  background-color: var(--second-modal-color);
-  transition: transform 0.3s ease;
-  transform: translate(0, -140%);
+  background-color: #333333;
 }
-
+.menu__item .active {
+  background-color: red;
+  text-underline-offset: 9px;
+}
 .panel.is-active {
-  transform: translate(0, 0);
 }
 
 .panel-btn {
-  cursor: pointer;
-  position: fixed;
-  border: none;
-  z-index: 999;
-  bottom: 1.2vh;
-  right: 1vh;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--main-color);
+  display: none;
 }
 
 .menu {
-  width: inherit;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -112,11 +103,29 @@ img {
   text-align: center;
 }
 
-.menu a {
+.menu__link {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.3s ease;
+}
+.menu__link:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+.menu__link.active {
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
+}
+/* .menu a {
   padding: 1.3rem;
-  width: inherit;
-  display: block;
-  font-size: 1.5rem;
+  width: 100%;
+  display: flex;
+  font-size: 1rem;
   text-decoration: none;
   color: var(--main-color);
   transition: all 0.3s ease;
@@ -126,11 +135,11 @@ img {
   font-weight: bold;
   color: var(--second-color);
   background-color: var(--main-modal-color);
-}
+} */
 
 /**Boton theme dark**/
 
-.dark-theme-btn{
+.dark-theme-btn {
   position: fixed;
   z-index: 999;
   bottom: 1vh;
@@ -147,16 +156,15 @@ img {
   color: var(--second-color);
   transition: all 0.3s ease-out;
 }
-.dark-theme-btn:hover{
+.dark-theme-btn:hover {
   background-color: var(--second-color);
   color: var(--main-color);
 }
 
-.dark-mode{
+.dark-mode {
   background-color: var(--second-color);
   color: var(--main-color);
 }
-
 
 /* .button_themedark{ esta es mi solucion pero no la uso porque no es optima
   width: 4rem;
@@ -227,53 +235,54 @@ img {
 }
  */
 /**Boton Scroll**/
-.button-up{
+.button-up {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
   width: 4rem;
-	height: 4rem;
-	background: var(--main-color);
-	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--second-color);
-	border-radius: 50%;
-	font-size: 1.5rem;
-	position: fixed;
-	/*bottom: 1.2rem;*/
-  top: 46.2rem;
-	right: 5rem;
-	border: 4px solid transparent;
-	z-index: 3000;
-	transition: all 300ms ease;
-	transform: scale(1);
+  height: 4rem;
+  background: var(--main-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--second-color);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  /* bottom: 1.2rem;
+  top: 35.7rem;
+	right: 5rem; */
+  right: calc(75.2rem + 1vh);
+  border: 4px solid transparent;
+  z-index: 3000;
+  transition: all 300ms ease;
+  transform: scale(1);
 }
 
-.button-up:hover{
-	transform: scale(1.1);
-	border-color: rgba(0,0,0,0.1);
-	-webkit-animation: 0.5s chicle 1;
+.button-up:hover {
+  transform: scale(1.1);
+  border-color: rgba(0, 0, 0, 0.1);
+  -webkit-animation: 0.5s chicle 1;
 }
 
-.hidden{
+.hidden {
   visibility: hidden;
   opacity: 0;
 }
 
-@-webkit-keyframes chicle{
+@-webkit-keyframes chicle {
+  30% {
+    -webkit-transform: scaleX(1.25) scaleY(0.75);
+  }
 
-	30%{
-		-webkit-transform: scaleX(1.25) scaleY(0.75);
-	}
+  40% {
+    -webkit-transform: scaleX(0.75) scaleY(1.25);
+  }
 
-	40%{
-	-webkit-transform: scaleX(0.75) scaleY(1.25);
-    }
-
-    60%{
-	-webkit-transform: scaleX(1.15) scaleY(0.85);
-    }
-
-} 
+  60% {
+    -webkit-transform: scaleX(1.15) scaleY(0.85);
+  }
+}
 /**Reloj digital**/
 #iniciar__reloj {
   cursor: pointer;
@@ -306,7 +315,7 @@ img {
 }
 
 /**Alarma**/
-#iniciar__alarma{
+#iniciar__alarma {
   cursor: pointer;
 }
 #iniciar__alarma:disabled {
@@ -315,7 +324,7 @@ img {
   color: #666666;
   background: #cccccc;
 }
-#detener__alarma{
+#detener__alarma {
   cursor: pointer;
 }
 #detener__alarma:disabled {
@@ -327,7 +336,7 @@ img {
 
 /**Eventos del teclado**/
 
-.section__container__eventkey{
+.section__container__eventkey {
   display: flex;
   width: 100%;
   height: 80vh;
@@ -335,10 +344,10 @@ img {
   background: var(--second-color);
 }
 
-#circle{
+#circle {
   position: relative;
 }
-.section__container__circle{
+.section__container__circle {
   position: relative;
   display: flex;
   margin: auto;
@@ -347,10 +356,10 @@ img {
   height: 90px;
   border-radius: 10rem;
   background: var(--main-color);
-} 
+}
 
 /**countdown**/
-#countdown-1{
+#countdown-1 {
   display: flex;
   justify-content: center;
   margin: 2rem;
@@ -361,7 +370,7 @@ img {
   color: #fff;
 }
 
-.countdown__container{
+.countdown__container {
   display: flex;
   width: 100%;
   margin: 1rem auto;
@@ -369,15 +378,14 @@ img {
   align-content: center;
 }
 
-.countdown__container__items{
+.countdown__container__items {
   display: flex;
   flex-direction: row;
   width: 100%;
   margin: 10px;
 }
 
-
-.countdown__container__item{
+.countdown__container__item {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -392,24 +400,24 @@ img {
   color: var(--second-color);
 }
 
-.number{
-    width: 10rem;
-    font-size: 32px;
-    text-align: center;
-    padding-top: 20px;
-    color: #FFFFFF;
-    background-color: #000000;
-    height: 70px;
+.number {
+  width: 10rem;
+  font-size: 32px;
+  text-align: center;
+  padding-top: 20px;
+  color: #ffffff;
+  background-color: #000000;
+  height: 70px;
 }
 
-.concept{
-    font-size: 28px;
-    text-align: center;
+.concept {
+  font-size: 28px;
+  text-align: center;
 }
 
 /* responsive-tester */
 
-.container__tester__inputs{
+.container__tester__inputs {
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
@@ -417,7 +425,7 @@ img {
 }
 /*** Network Status ***/
 .online,
-.offline{
+.offline {
   width: 100%;
   height: 10%;
   position: fixed;
@@ -431,7 +439,7 @@ img {
   color: #fff;
 }
 
-.offline{
+.offline {
   background-color: rgb(236, 54, 54);
 }
 /*deteccion de conexion / este codigo fue realizado por mi opte por el del profesor porque usa una manera mas optima
@@ -471,10 +479,10 @@ img {
 */
 
 /**Geolocalizacion**/
-#status{
+#status {
   margin-top: 1rem;
 }
-#map-link{
+#map-link {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -482,10 +490,314 @@ img {
   text-decoration: none;
 }
 
+/**Filtro de busqueda**/
+
+#container__filter__search {
+  margin: 1rem 0;
+}
+
+.container__filter__img {
+  border: thin solid var(--second-color);
+  padding: 1rem;
+}
+.container__filter__img--modifier {
+  border: thin solid var(--second-color);
+  padding: 1rem;
+}
+
+.card {
+  display: inline-block;
+  margin: 16px 40px;
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.card--fount::before {
+  display: inline-block;
+  margin: 16px 40px;
+  background-color: var(--second-color);
+  color: var(--main-color);
+  transition: all 0.1ms;
+}
+
+.card--nofount {
+  display: none;
+  margin: 16px 40px;
+  background-color: green;
+  color: var(--main-color);
+}
+.card figcaption {
+  padding: 1rem;
+}
+
+/****digital raffle****/
+.digital__raffle__tittle {
+  font-size: 2rem;
+}
+.digital__raffle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.digital__raffle__items {
+  display: flex;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 1.8rem;
+  padding: 0 0.5rem;
+  background-color: #f7df1e;
+  margin: 0.5rem 0;
+  list-style: none;
+}
+#winner-btn {
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #111111;
+  width: 11.8rem;
+  height: 1.8rem;
+  margin: 0.3rem 0;
+  justify-content: center;
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(255, 236, 2, 1) 100%
+  );
+}
+.digital__raffle__items--one {
+  font-weight: bolder;
+  background-color: #31e619;
+}
+.digital__raffle__items--two {
+  font-weight: bolder;
+  background-color: #19d8e6;
+}
+.digital__raffle__items--three {
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #c419e6;
+}
+.digital__raffle__items--four {
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #ec4310;
+}
+.digital__raffle__items--five {
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #5209fc;
+}
+.digital__raffle__items--six {
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #e69419;
+}
+.digital__raffle__items--seven {
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #bd3690;
+}
+.digital__raffle__items--eight {
+  font-weight: bolder;
+  color: #ffffff;
+  background-color: #68afdf;
+}
+.digital__raffle__items--nine {
+  font-weight: bolder;
+  background-color: #04fd80;
+}
+
+/***galeria slider**/
+.slider {
+  position: relative;
+  border: 1px solid black;
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+.slider__slides {
+  position: relative;
+  height: 400px;
+}
+.slider__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+.slider__slide img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.slider__slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+.slider__btn {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.slider a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  border: thin solid #000;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.slider a:hover {
+  color: #4d4d4d;
+}
+/* .tittle__gallery__slider{ estos estilos son los que yo utilice para resolver el ejercicio, pero opte por los del profe porque son mas optimos
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+.carousel{
+  min-width: 10rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.container__btn{
+  display: flex;
+  margin: 0 auto;
+}
+#imagen {
+  display: flex;
+  width: 100%;
+  height: 21.8rem;
+  background-size: cover;
+  align-items: end;
+}
+
+
+#retroceder{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem;
+  justify-content: center;
+  border: none;
+  border-radius: 30%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.slider-arrow-prev{
+  font-size: 2.5rem;
+  align-self: center;
+}
+
+#avanzar{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0.5rem 0.5rem;
+  justify-content: center;
+  border: none;
+  border-radius: 30%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.slider-arrow-next{
+  font-size: 2.5rem;
+  align-self: center;
+} */
+
 /*media querys*/
-@media screen and (max-width: 905px){
-  .countdown__container__items{
-      flex-direction: column;
+@media screen and (max-width: 905px) {
+  main{
+    width: 100%;
   }
 
+  
+  .countdown__container__items {
+    flex-direction: column;
   }
+
+  /****menu hamburguer*****/
+  .panel-btn {
+    cursor: pointer;
+    position: fixed;
+    border: none;
+    z-index: 999;
+    bottom: 1.2vh;
+    right: 1vh;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+  }
+
+  .panel {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    overflow-y: auto;
+    background-color: var(--second-modal-color);
+    transition: transform 0.3s ease;
+    transform: translate(0, -140%);
+  }
+
+  .panel.is-active {
+    transform: translate(0, 0);
+  }
+
+  /**Boton Scroll**/
+.button-up {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  width: 4rem;
+  height: 4rem;
+  background: var(--main-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--second-color);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  /* bottom: 1.2rem;
+  top: 35.7rem;
+	right: 5rem; */
+  left: 13vh;
+  border: 4px solid transparent;
+  z-index: 3000;
+  transition: all 300ms ease;
+  transform: scale(1);
+}
+
+
+}

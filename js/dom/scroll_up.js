@@ -17,6 +17,7 @@ let cancelAnimation;
    d.addEventListener("click", e => {
     
      if (e.target.matches(btn) || e.target.matches(`${btn} *`)) { //todo: esta linea es para seleccionar todo el selector de css e.target.matches(`${btn} *`) en caso de no ponerla no funcionara si se le da click al icono dentro del boton solo si se le da click a el boton como tal, con esta linea habilitados la funcion a todo lo que este dentro de ese selector
+      console.log("active")
       //let cancelAnimation = window.requestAnimationFrame(scrollUp);	
        //cancelAnimationFrame(cancelAnimation);
       w.scrollTo ({

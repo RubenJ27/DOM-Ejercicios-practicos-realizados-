@@ -1,6 +1,6 @@
 const d = document;
 const w = window;
-//todo: la clave para resolver este ejercicio es seleccionar los elementos correspientes en el dom para su posterior eliminacion o adicion cuando se este en la resolucion requerida usando los metodos que se requieran */
+//todo: la clave para resolver este ejercicio es seleccionar los elementos correspondientes en el dom para su posterior eliminacion o adicion cuando se este en la resolucion requerida usando los metodos que se requieran */
 export default function resposiveJs(active) {
   //resize, load, window match media
   let selectorFather = d.getElementById("section4");

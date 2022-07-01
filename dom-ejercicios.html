@@ -11,7 +11,7 @@
 </head>
 
 <body class="theme__dark" data-dark>
- <!-- <div class="conexion"><h2 class="text__conexion"></h2></div> este codigo lo realice yo, opte por el del profe porque es mas optimo-->
+  <!-- <div class="conexion"><h2 class="text__conexion"></h2></div> este codigo lo realice yo, opte por el del profe porque es mas optimo-->
   <header class="header">
     <h1>Ejercicios del DOM</h1>
   </header>
@@ -22,17 +22,20 @@
   </button>
   <aside class="panel">
     <nav class="menu">
-      <a href="#seccion1">Reloj Digital y Alarma Sonora</a>
-      <a href="#seccion2">Eventos del teclado</a>
-      <a href="#seccion3">Countdown</a>
-      <a href="#seccion4">Resposive con Javascript</a>
-      <a href="#seccion5">Responsive Tester</a>
-      <a href="#seccion6">Deteccion de dispositivos (User Agent)</a>
-      <a href="#seccion7">Deteccion de conexion</a>
-      <a href="#seccion8">Deteccion de WebCam</a>
-      <a href="#seccion9">Geolocalizacion</a>
-      <a href="#seccion10">Filtros de Busqueda</a>
-      <a href="#seccion11">Seccion 11</a>
+      <a class="menu__item menu__link active" href="#seccion1" data-url="seccion1">Reloj Digital y Alarma Sonora</a>
+      <a class="menu__item menu__link" href="#seccion2" data-url="seccion2">Eventos del teclado</a>
+      <a class="menu__item menu__link" href="#seccion3" data-url="seccion3">Countdown</a>
+      <a class="menu__item menu__link" href="#seccion4" data-url="seccion4">Resposive con Javascript</a>
+      <a class="menu__item menu__link" href="#seccion5" data-url="seccion5">Responsive Tester</a>
+      <a class="menu__item menu__link" href="#seccion6" data-url="seccion6">Deteccion de dispositivos (User Agent)</a>
+      <a class="menu__item menu__link" href="#seccion7" data-url="seccion7">Deteccion de conexion</a>
+      <a class="menu__item menu__link" href="#seccion8" data-url="seccion8">Deteccion de WebCam</a>
+      <a class="menu__item menu__link" href="#seccion9" data-url="seccion9">Geolocalizacion</a>
+      <a class="menu__item menu__link" href="#seccion10" data-url="seccion10">Filtros de Busqueda</a>
+      <a class="menu__item menu__link" href="#seccion11" data-url="seccion11">Sorteo digital</a>
+      <a class="menu__item menu__link" href="#seccion12" data-url="seccion12">Responsive Slider</a>
+      <a class="menu__item" href="#seccion13">Seccion 13</a>
+      <a class="menu__item" href="#seccion14">Seccion 14</a>
     </nav>
   </aside>
   <main>
@@ -57,9 +60,9 @@
         </div>
       </div>
     </section>
-    <section  id="seccion3" class="section__container">
+    <section id="seccion3" class="section__container">
       <h2 class="section__container--modifier">Cuenta atras para mi cumpleaños 📅🎈🎁🎂</h2>
-      <div class="countdown__container" id="countdown">
+      <!--  <div class="countdown__container" id="countdown">
 
         <div class="countdown__container__items">
 
@@ -87,19 +90,19 @@
 
         <!-- <div id="countdown__container__items"></div>
         <div id="countdown__container__items"></div>
-        <div id="countdown__container__items"></div> -->
+        <div id="countdown__container__items"></div> 
       </div>
 
-      <div id="countdown"></div>
+      <div id="countdown"></div> -->
     </section>
-    <section id="section4" class="section__container">
+    <section id="seccion4" class="section__container">
       <h2 class="section__container__title">Responsive con Javascript</h2>
       <!-- insert iframe from youtube -->
-      
-      <iframe class="youtube__link" width="400" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+      <!--  <iframe class="youtube__link" width="400" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg" title="YouTube video player" frameborder="0" allowfullscreen></iframe> -->
 
       <!--maps-->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.248188136!2d139.6007803883118!3d35.66844146514209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sciudad%20de%20Tokio%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2sco!4v1648222480984!5m2!1ses!2sco" width="400" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps__link"></iframe>
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.248188136!2d139.6007803883118!3d35.66844146514209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2sciudad%20de%20Tokio%2C%20Tokio%2C%20Jap%C3%B3n!5e0!3m2!1ses!2sco!4v1648222480984!5m2!1ses!2sco" width="400" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="maps__link"></iframe> -->
     </section>
     <section id="seccion5" class="section__container">
       <h2>Resposive Tester</h2>
@@ -113,7 +116,8 @@
           <input type="button" value="Probar" id="container__tester__button__try">
           <input type="button" value="Cerrar" id="container__tester__button__close">
         </div> -->
-        <form id="responsive-tester"><!--esta es la solucion del profe obte por esta porque es la mas optima-->
+        <form id="responsive-tester">
+          <!--esta es la solucion del profe obte por esta porque es la mas optima-->
           <input type="url" name="direccion" placeholder="URL" required>
           <br>
           <input type="text" name="ancho" placeholder="Ancho" required>
@@ -137,40 +141,129 @@
     <section id="seccion8" class="section__container">
       <h2>Deteccion de WebCam</h2>
       <!-- Aqui el video embebido de la web cam -->
-      <div class="container__camera">
+      <!-- <div class="container__camera">
         <video id="video" playsinline autoplay></video>
-      </div>
-      
+      </div> -->
+
     </section>
     <section id="seccion9" class="section__container">
       <h2>Geolocalizacion</h2>
-      <p id="status"></p>
+      <!-- <p id="status"></p>
       <p id="presicion"></p>
-      <a id="map-link" target="_blan" rel="noopener""></a>
+      <a id="map-link" target="_blan" rel="noopener""></a> -->
     </section>
     <section id="seccion10" class="section__container">
       <h2>Filtros de Búsqueda</h2><!-- eventos del teclado -->
+
+      <form class="container__filter" id="container__filter">
+        <input type="search" name="Search" id="container__filter__search" placeholder="Search" pattern="[A-Za-z0-9]"
+          required>
+
+        <div class="container__filter__img">
+          <figure class="card">
+            <img src="img/tech.jpg" alt="Tech">
+            <figcaption>tech</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="img/animals.jpg" alt="Animals">
+            <figcaption>animals</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="img/people.jpg" alt="People">
+            <figcaption>people</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="img/arch.jpg" alt="Arch">
+            <figcaption>arch</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="img/nature.jpg" alt="Nature">
+            <figcaption>nature</figcaption>
+          </figure>
+          <figure class="card">
+            <img src="img/any.jpg" alt="Any">
+            <figcaption>any</figcaption>
+          </figure>
+
+        </div>
+
+      </form>
     </section>
     <section id="seccion11" class="section__container">
-      <h2>Seccion 11</h2>
+      <h1 class="digital__raffle__tittle">Sorteo digital</h1>
+      <ul class="digital__raffle">
+        <li class="digital__raffle__items">Angello</li>
+        <li class="digital__raffle__items digital__raffle__items--one">Alfonso</li>
+        <li class="digital__raffle__items digital__raffle__items--two">Santiago</li>
+        <li class="digital__raffle__items digital__raffle__items--three">Karen</li>
+        <li class="digital__raffle__items digital__raffle__items--four">Carlos</li>
+        <li class="digital__raffle__items digital__raffle__items--five">Sandra</li>
+        <li class="digital__raffle__items digital__raffle__items--six">Jesus</li>
+        <li class="digital__raffle__items digital__raffle__items--seven">Emmanuel</li>
+        <li class="digital__raffle__items digital__raffle__items--eight">Andres</li>
+        <li class="digital__raffle__items digital__raffle__items--nine">Juan</li>
+      </ul>
+      <button id="winner-btn">Obtener Ganador</button>
+
     </section>
+    <section id="seccion12" class="section__container">
+      <h1 class="tittle__gallery__slider">Responsive Slider</h1>
+
+      <div class="slider">
+        <div class="slider__slides">
+          <div class="slider__slide active">
+            <img src="img/animals.jpg" alt="Animals">
+          </div>
+          <div class="slider__slide">
+            <h4>Diapositiva 2</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, nostrum. Cupiditate tempora
+              reiciendis ab odit voluptatum voluptatibus accusantium maiores cum corrupti quis? Rem laborum ipsum sit
+              eaque a beatae? Cum.</p>
+          </div>
+          <div class="slider__slide">
+            <img src="img/nature.jpg" alt="Nature">
+          </div>
+          <div class="slider__slide">
+            <h4>Diapositiva 4</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, nostrum. Cupiditate tempora
+              reiciendis ab odit voluptatum voluptatibus accusantium maiores cum corrupti quis? Rem laborum ipsum sit
+              eaque a beatae? Cum.</p>
+          </div>
+        </div>
+        <div class="slider__btn">
+          <a class="slider__btn__prev" href="#">&laquo;</a>
+          <a class="slider__btn__next " href="#">&raquo;</a>
+        </div>
+      </div>
+
+      <!-- <div class="carousel"> esta es mi solucion opte por la del profe porque es mucho mas optima 
+        <div id="imagen">
+          <div class="container__btn">
+            <button id="retroceder"><span class="slider-arrow-prev">‹</span></button>
+
+            <button id="avanzar"><span class="slider-arrow-next">›</span></button>
+          </div>
+        </div>
+      </div> -->
+
+    </section>
+
+
   </main>
 
   <!--Boton de tema dark-->
-  <button class="dark-theme-btn">🌙</button> <!--esta es la solucion del profe la uso porque es mas optima-->
- <!--  <div class="button_themedark"> esta es mi solucion
+  <button class="dark-theme-btn">🌙</button>
+  <!--esta es la solucion del profe la uso porque es mas optima-->
+  <!--  <div class="button_themedark"> esta es mi solucion
     <button class="sun">☀️</button>
     <button class="moon">🌙</button>
   </div> -->
 
 
-   <!--Boton de ir hacia arriba-->
+  <!--Boton de ir hacia arriba-->
+  <!-- <i class="fas fa-chevron-up"></i> -->
 
-   <div class="button-up hidden">
-
-    <i class="fas fa-chevron-up"></i>
-
-  </div>
+  <div class="button-up hidden">&#11014;</div>
   <script src="js/index_dom.js" type="module"></script>
 </body>
 
